@@ -6,13 +6,13 @@ install:
 
 uninstall:
 	@ echo "\033[1;32muninstall dev build\033[m"
-	@ python3.8 -m pip uninstall .
+	@ python3.8 -m pip uninstall gridvid
 
 reinstall: uninstall install
 
 build:
 	@ echo "\033[1;32mBuilding Package\033[m"
-	@ python3.8 -m pip install -q -q -q user --upgrade setuptools wheel
+	@ python3.8 -m pip install -q -q -q --user --upgrade setuptools wheel
 	@ python3.8 setup.py sdist
 
 upload:

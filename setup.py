@@ -10,7 +10,7 @@ for n, package in enumerate(packages):
 
 url = 'https://github.com/GabrielSCabrera/Gridvid'
 setup(
-    name = 'Gridvid',
+    name = 'gridvid',
     packages = packages,
     version = '0.0.1',
     description = 'Allows you to put various grids on videos.',

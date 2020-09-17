@@ -13,11 +13,12 @@ reinstall: uninstall install
 build:
 	@ echo "\033[1;32mBuilding Package\033[m"
 	@ python3.8 -m pip install -q -q -q user --upgrade setuptools wheel
-	@ python3.8 setup.py sdist bdist_wheel
+	@ python3.8 setup.py sdist
 
 upload:
 	@ echo "\033[1;32mUploading Package to PyPi\033[m"
-	@ python3.8 -m twine upload --repository testpypi dist/*
+	@ python3.8 -m pip install twine
+	@ python3.8 -m twine upload dist/*
 
 build-upload: build upload
 
